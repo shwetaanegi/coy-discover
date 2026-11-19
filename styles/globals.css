@@ -1,0 +1,724 @@
+
+/* =========================================
+   1. GLOBAL STYLES
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #f45b78;
+  --primary-dark: #e54466;
+  --secondary: #ff9a9e;
+  --background: #fff8f8;
+  --text: #29252a;
+  --muted: #8d858a;
+  --white: #ffffff;
+  --border: #f1e7e9;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================
+   2. MAIN APP LAYOUT
+========================================= */
+
+.app-shell {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 35px 110px;
+  position: relative;
+}
+
+.app-header {
+  text-align: center;
+  padding: 12px 0 30px;
+}
+
+.app-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 43px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+.app-header p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.content {
+  width: 100%;
+  min-height: 500px;
+}
+
+
+/* =========================================
+   3. HOME SECTION
+========================================= */
+
+.content > div > h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.content > div > p {
+  color: var(--muted);
+}
+
+
+/* =========================================
+   4. SWIPE CONTAINER
+========================================= */
+
+.swipe-container {
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.swipe-card {
+  position: relative;
+  width: 100%;
+  height: 530px;
+  border-radius: 24px;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0 15px 45px rgba(55, 28, 40, 0.15);
+}
+
+.swipe-card:active {
+  cursor: grabbing;
+}
+
+
+/* =========================================
+   5. PROFILE CARD
+========================================= */
+
+.profile-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #e9dfe1;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+  background: linear-gradient(
+    to bottom,
+    transparent 35%,
+    rgba(0, 0, 0, 0.12) 50%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
+}
+
+.profile-details {
+  width: 100%;
+  color: var(--white);
+}
+
+.profile-details h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.profile-city {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.profile-bio {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interests span {
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+
+
+/* =========================================
+   6. LIKE AND PASS INDICATORS
+========================================= */
+
+.swipe-label {
+  position: absolute;
+  top: 35px;
+  z-index: 5;
+  padding: 8px 16px;
+  border: 3px solid;
+  border-radius: 8px;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  pointer-events: none;
+}
+
+.like-label {
+  left: 25px;
+  color: #36d69a;
+  border-color: #36d69a;
+  transform: rotate(-15deg);
+}
+
+.pass-label {
+  right: 25px;
+  color: #ff526b;
+  border-color: #ff526b;
+  transform: rotate(15deg);
+}
+
+
+/* =========================================
+   7. SWIPE BUTTONS
+========================================= */
+
+.swipe-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.swipe-buttons button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  font-size: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swipe-buttons button:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pass-button {
+  color: #ff536b;
+}
+
+.like-button {
+  color: #39c991;
+}
+
+
+/* =========================================
+   8. NO MORE PROFILES
+========================================= */
+
+.no-profiles {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.no-profiles h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.no-profiles p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   9. BOTTOM NAVIGATION
+========================================= */
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid var(--border);
+  z-index: 20;
+}
+
+.tab {
+  position: relative;
+  height: 100%;
+  min-width: 75px;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #aaa0a5;
+  transition: color 0.2s ease;
+}
+
+.tab:hover,
+.tab.active {
+  color: var(--primary);
+}
+
+.tab-icon {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.tab-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 5px 5px 0 0;
+}
+
+
+/* =========================================
+   10. MATCH MODAL
+========================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(25, 15, 20, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.match-modal {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 25px;
+  border-radius: 28px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.25);
+  animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.match-heart {
+  font-size: 48px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.match-modal h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.match-modal > p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.match-photo-wrapper {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(
+    135deg,
+    #ff9a9e,
+    #fad0c4,
+    #f45b78
+  );
+}
+
+.match-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.match-modal h2 {
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.match-modal .match-city {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.match-continue-button {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 30px;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.match-continue-button:hover {
+  background: var(--primary-dark);
+}
+
+
+/* =========================================
+   11. MATCHES PAGE
+========================================= */
+
+.matches-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.matches-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.matches-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 7px;
+}
+
+.matches-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.match-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.match-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.match-card-info {
+  padding: 15px;
+}
+
+.match-card-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.match-card-info p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.match-card-info span {
+  display: inline-block;
+  color: var(--primary);
+  background: #fff0f3;
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   12. EMPTY MATCHES STATE
+========================================= */
+
+.matches-empty {
+  width: 100%;
+  padding: 75px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty-heart {
+  font-size: 65px;
+  color: #f3a4b2;
+  margin-bottom: 15px;
+}
+
+.matches-empty h3 {
+  color: var(--text);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.matches-empty p {
+  max-width: 350px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   13. RESPONSIVE DESIGN - TABLETS
+========================================= */
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 20px 20px 105px;
+  }
+
+  .app-header {
+    padding-bottom: 25px;
+  }
+
+  .app-header h1 {
+    font-size: 36px;
+  }
+
+  .swipe-card {
+    height: 500px;
+  }
+
+  .matches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .match-card img {
+    height: 190px;
+  }
+
+  .tab-bar {
+    gap: 45px;
+  }
+}
+
+
+/* =========================================
+   14. RESPONSIVE DESIGN - MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .app-shell {
+    padding: 12px 15px 100px;
+  }
+
+  .app-header {
+    padding: 10px 0 20px;
+  }
+
+  .app-header h1 {
+    font-size: 34px;
+  }
+
+  .app-header p {
+    font-size: 12px;
+  }
+
+  .swipe-container {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .swipe-card {
+    height: min(65vh, 510px);
+    min-height: 380px;
+    border-radius: 20px;
+  }
+
+  .profile-card {
+    border-radius: 20px;
+  }
+
+  .profile-overlay {
+    padding: 20px;
+  }
+
+  .profile-details h2 {
+    font-size: 26px;
+  }
+
+  .profile-bio {
+    font-size: 13px;
+  }
+
+  .swipe-buttons button {
+    width: 58px;
+    height: 58px;
+    font-size: 26px;
+  }
+
+  .tab-bar {
+    height: 72px;
+    gap: 35px;
+  }
+
+  .tab-icon {
+    font-size: 23px;
+  }
+
+  .tab-label {
+    font-size: 11px;
+  }
+
+  .matches-heading h2 {
+    font-size: 27px;
+  }
+
+  .matches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .match-card img {
+    height: 155px;
+  }
+
+  .match-card-info {
+    padding: 11px;
+  }
+
+  .match-card-info h3 {
+    font-size: 14px;
+  }
+
+  .match-modal {
+    padding: 28px 20px;
+  }
+
+  .match-modal h1 {
+    font-size: 31px;
+  }
+}
+
+
+/* =========================================
+   15. SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 350px) {
+  .swipe-card {
+    min-height: 350px;
+  }
+
+  .matches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-bar {
+    gap: 20px;
+  }
+}

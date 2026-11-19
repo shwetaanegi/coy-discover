@@ -1,0 +1,452 @@
+{
+  "profiles": [
+    {
+      "id": "p1",
+      "name": "Aarav",
+      "age": 24,
+      "photo": "https://i.pravatar.cc/600?img=11",
+      "bio": "Coffee lover and traveller. Always looking for new adventures.",
+      "city": "Delhi",
+      "interests": [
+        "Music",
+        "Travel",
+        "Movies"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p2",
+      "name": "Riya",
+      "age": 23,
+      "photo": "https://i.pravatar.cc/600?img=47",
+      "bio": "Books, sunsets and meaningful conversations.",
+      "city": "Gurgaon",
+      "interests": [
+        "Reading",
+        "Food",
+        "Photography"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p3",
+      "name": "Kabir",
+      "age": 25,
+      "photo": "https://i.pravatar.cc/600?img=12",
+      "bio": "Gym enthusiast who loves weekend road trips.",
+      "city": "Noida",
+      "interests": [
+        "Fitness",
+        "Travel",
+        "Music"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p4",
+      "name": "Ananya",
+      "age": 22,
+      "photo": "https://i.pravatar.cc/600?img=48",
+      "bio": "Artist by passion and foodie by choice.",
+      "city": "Delhi",
+      "interests": [
+        "Art",
+        "Painting",
+        "Food"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p5",
+      "name": "Vihaan",
+      "age": 26,
+      "photo": "https://i.pravatar.cc/600?img=13",
+      "bio": "Software developer who loves exploring new places.",
+      "city": "Faridabad",
+      "interests": [
+        "Coding",
+        "Gaming",
+        "Travel"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p6",
+      "name": "Meera",
+      "age": 24,
+      "photo": "https://i.pravatar.cc/600?img=49",
+      "bio": "Dancing through life one song at a time.",
+      "city": "Delhi",
+      "interests": [
+        "Dance",
+        "Music",
+        "Fashion"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p7",
+      "name": "Arjun",
+      "age": 25,
+      "photo": "https://i.pravatar.cc/600?img=14",
+      "bio": "Football, fitness and a little bit of adventure.",
+      "city": "Noida",
+      "interests": [
+        "Football",
+        "Fitness",
+        "Movies"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p8",
+      "name": "Ishita",
+      "age": 23,
+      "photo": "https://i.pravatar.cc/600?img=50",
+      "bio": "I collect memories, not things.",
+      "city": "Gurgaon",
+      "interests": [
+        "Travel",
+        "Books",
+        "Coffee"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p9",
+      "name": "Reyansh",
+      "age": 27,
+      "photo": "https://i.pravatar.cc/600?img=15",
+      "bio": "Entrepreneur, music lover and amateur chef.",
+      "city": "Delhi",
+      "interests": [
+        "Business",
+        "Cooking",
+        "Music"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p10",
+      "name": "Aditi",
+      "age": 22,
+      "photo": "https://i.pravatar.cc/600?img=51",
+      "bio": "Dreaming big and enjoying the little things.",
+      "city": "Faridabad",
+      "interests": [
+        "Photography",
+        "Movies",
+        "Travel"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p11",
+      "name": "Dev",
+      "age": 24,
+      "photo": "https://i.pravatar.cc/600?img=16",
+      "bio": "Tech geek with a soft spot for animals.",
+      "city": "Delhi",
+      "interests": [
+        "Technology",
+        "Pets",
+        "Gaming"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p12",
+      "name": "Sana",
+      "age": 25,
+      "photo": "https://i.pravatar.cc/600?img=52",
+      "bio": "Love discovering hidden cafes and good music.",
+      "city": "Noida",
+      "interests": [
+        "Cafe hopping",
+        "Music",
+        "Food"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p13",
+      "name": "Aditya",
+      "age": 26,
+      "photo": "https://i.pravatar.cc/600?img=17",
+      "bio": "A little adventurous, a little introverted.",
+      "city": "Gurgaon",
+      "interests": [
+        "Cycling",
+        "Nature",
+        "Movies"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p14",
+      "name": "Kiara",
+      "age": 23,
+      "photo": "https://i.pravatar.cc/600?img=53",
+      "bio": "Fashion, coffee and spontaneous plans.",
+      "city": "Delhi",
+      "interests": [
+        "Fashion",
+        "Shopping",
+        "Coffee"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p15",
+      "name": "Rohan",
+      "age": 24,
+      "photo": "https://i.pravatar.cc/600?img=18",
+      "bio": "Music is my love language.",
+      "city": "Faridabad",
+      "interests": [
+        "Music",
+        "Guitar",
+        "Travel"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p16",
+      "name": "Tara",
+      "age": 26,
+      "photo": "https://i.pravatar.cc/600?img=54",
+      "bio": "Nature lover who enjoys peaceful weekends.",
+      "city": "Delhi",
+      "interests": [
+        "Nature",
+        "Yoga",
+        "Reading"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p17",
+      "name": "Karan",
+      "age": 25,
+      "photo": "https://i.pravatar.cc/600?img=19",
+      "bio": "Let's talk about movies and random things.",
+      "city": "Noida",
+      "interests": [
+        "Movies",
+        "Gaming",
+        "Food"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p18",
+      "name": "Myra",
+      "age": 22,
+      "photo": "https://i.pravatar.cc/600?img=55",
+      "bio": "Creative soul who loves making memories.",
+      "city": "Gurgaon",
+      "interests": [
+        "Art",
+        "Dance",
+        "Photography"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p19",
+      "name": "Dhruv",
+      "age": 27,
+      "photo": "https://i.pravatar.cc/600?img=20",
+      "bio": "Always up for a spontaneous road trip.",
+      "city": "Delhi",
+      "interests": [
+        "Cars",
+        "Travel",
+        "Fitness"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p20",
+      "name": "Naina",
+      "age": 24,
+      "photo": "https://i.pravatar.cc/600?img=56",
+      "bio": "A foodie who loves trying new recipes.",
+      "city": "Faridabad",
+      "interests": [
+        "Cooking",
+        "Food",
+        "Movies"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p21",
+      "name": "Aryan",
+      "age": 23,
+      "photo": "https://i.pravatar.cc/600?img=21",
+      "bio": "Developer during the day, gamer at night.",
+      "city": "Noida",
+      "interests": [
+        "Coding",
+        "Gaming",
+        "Music"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p22",
+      "name": "Simran",
+      "age": 25,
+      "photo": "https://i.pravatar.cc/600?img=57",
+      "bio": "Sunsets, long walks and good conversations.",
+      "city": "Delhi",
+      "interests": [
+        "Walking",
+        "Travel",
+        "Books"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p23",
+      "name": "Ishaan",
+      "age": 26,
+      "photo": "https://i.pravatar.cc/600?img=22",
+      "bio": "Sports lover and weekend explorer.",
+      "city": "Gurgaon",
+      "interests": [
+        "Cricket",
+        "Fitness",
+        "Travel"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p24",
+      "name": "Pari",
+      "age": 23,
+      "photo": "https://i.pravatar.cc/600?img=58",
+      "bio": "Living life with a little creativity.",
+      "city": "Noida",
+      "interests": [
+        "Painting",
+        "Music",
+        "Fashion"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p25",
+      "name": "Manav",
+      "age": 25,
+      "photo": "https://i.pravatar.cc/600?img=23",
+      "bio": "Coffee addict and amateur photographer.",
+      "city": "Delhi",
+      "interests": [
+        "Coffee",
+        "Photography",
+        "Travel"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p26",
+      "name": "Aisha",
+      "age": 24,
+      "photo": "https://i.pravatar.cc/600?img=59",
+      "bio": "I love books, beaches and beautiful places.",
+      "city": "Faridabad",
+      "interests": [
+        "Reading",
+        "Travel",
+        "Nature"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p27",
+      "name": "Yash",
+      "age": 26,
+      "photo": "https://i.pravatar.cc/600?img=24",
+      "bio": "Fitness enthusiast with a love for good food.",
+      "city": "Gurgaon",
+      "interests": [
+        "Fitness",
+        "Cooking",
+        "Sports"
+      ],
+      "likedYou": true
+    },
+    {
+      "id": "p28",
+      "name": "Diya",
+      "age": 22,
+      "photo": "https://i.pravatar.cc/600?img=60",
+      "bio": "Making ordinary days feel special.",
+      "city": "Delhi",
+      "interests": [
+        "Dance",
+        "Movies",
+        "Art"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p29",
+      "name": "Neil",
+      "age": 25,
+      "photo": "https://i.pravatar.cc/600?img=25",
+      "bio": "Music, mountains and meaningful connections.",
+      "city": "Noida",
+      "interests": [
+        "Music",
+        "Hiking",
+        "Travel"
+      ],
+      "likedYou": false
+    },
+    {
+      "id": "p30",
+      "name": "Avni",
+      "age": 24,
+      "photo": "https://i.pravatar.cc/600?img=61",
+      "bio": "A little bit of everything and a lot of curiosity.",
+      "city": "Gurgaon",
+      "interests": [
+        "Photography",
+        "Books",
+        "Food"
+      ],
+      "likedYou": false
+    }
+  ],
+  "swipes": [
+    {
+      "profileId": "p1",
+      "action": "pass",
+      "createdAt": "2026-11-19T00:57:37.816Z"
+    },
+    {
+      "profileId": "p2",
+      "action": "like",
+      "createdAt": "2026-11-19T00:57:43.268Z"
+    },
+    {
+      "profileId": "p3",
+      "action": "pass",
+      "createdAt": "2026-11-19T00:57:46.149Z"
+    },
+    {
+      "profileId": "p4",
+      "action": "like",
+      "createdAt": "2026-11-19T00:57:56.561Z"
+    },
+    {
+      "profileId": "p5",
+      "action": "pass",
+      "createdAt": "2026-11-19T01:09:18.563Z"
+    }
+  ],
+  "matches": []
+}
